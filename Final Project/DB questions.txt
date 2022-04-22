@@ -1,0 +1,16 @@
+--05) List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+SELECT 
+	employees.first_name, 
+	employees.last_name, 
+	employees.sex
+FROM employees
+WHERE first_name = 'Hercules' AND last_name LIKE 'B%';
+
+
+--08) In descending order, list the frequency count of employee last names, i.e., how many employees share each last name.
+SELECT employees.last_name, Count (*)
+FROM employees
+GROUP BY employees.last_name
+ORDER BY Count (*) DESC;
+
+
