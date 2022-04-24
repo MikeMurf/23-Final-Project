@@ -8,6 +8,7 @@ CREATE TABLE "full_covid_table" (
     "deaths" INT   NOT NULL,
     "recovered" INT   NOT NULL,
     "active" INT   NOT NULL,
+    "case_fatality" REAL   NOT NULL,
     "new_cases" INT   NOT NULL,
     "new_deaths" INT   NOT NULL,
     "new_recovered" INT   NOT NULL,
