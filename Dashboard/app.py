@@ -2,14 +2,23 @@ import psycopg2
 
 import csv
 
+import pickle
 import json
 import collections
-from flask import Flask, jsonify
+import flask
+import pandas as pd
 
 #################################################
 # Flask Setup
 #################################################
-app = Flask(__name__)
+app = flask.Flask(__name__)
+
+#################################################
+# Model Import
+# Use pickle to load in the pre-trained model
+#################################################
+with open(f'model/bike_model_xgboost.pkl', 'rb') as f:
+    model = pickle.load(f)
 
 #################################################
 # Database Setup
@@ -23,7 +32,7 @@ def get_db_connection():
     return conn
 
 #################################################
-# Flask Route
+# Flask Routes
 #################################################
 @app.route('/')
 def index():
@@ -59,9 +68,31 @@ def index():
 
     cur.close()
     conn.close()
-    response = jsonify(covid_data)
+    response = flask.jsonify(covid_data)
     response.headers.add('Access-Control-Allow-Origin', '*')
     return response
+
+@app.route('/', methods=['GET', 'POST'])
+def main():
+    if flask.request.method == 'GET':
+        return(flask.render_template('new_forecast.html'))
+    if flask.request.method == 'POST':
+        conf_cases = flask.request.form['conf_cases']
+        conf_deaths = flask.request.form['conf_deaths']
+        conf_recovered = flask.request.form['conf_recovered']
+        conf_active = flask.request.form['conf_active']
+        input_variables = pd.DataFrame([[conf_cases, conf_deaths, conf_recovered, conf_active]],
+                                       columns=['confirmed_cases', 'confirmed_deaths',
+                                       'confirmed_recovered', 'confirmed_active'],
+                                       dtype=float)
+        prediction = model.predict(input_variables)[0]
+        return flask.render_template('new_forecast.html',
+                                     original_input={'Confirmed Cases':conf_cases,
+                                                     'Confirmed Deaths':conf_deaths,
+                                                     'Confirmed Recovered':conf_recovered,
+                                                     'Confirmed Active':conf_active},
+                                     result=prediction,
+                                     )
 
 if __name__ == '__main__':
     app.run(debug=True)
