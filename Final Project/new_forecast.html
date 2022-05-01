@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>COVID-19 At A Glance</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/d3Style.css">
+</head>
+
+<body>
+  	<div class="container">
+	  <div class="row">
+	    <div class="col-xs-12 col-md-12">
+        <h1 style="background-color:#d7c0f1; text-align:center; 
+			  font-size: 2rem; color: #e95920">COVID-19 At A Glance</h1>
+        <h1 style="background-color:#d7c0f1; text-align:center; 
+        font-size: 1.5rem; color: #e95920">Hospitalisation Forecasting</h1>
+  	    </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+        <div class="navbar-css"></div>
+          <div class="topnav">
+            <a href="index.html">Visualisations</a>
+            <a href="forecast.html">Hospitalisation Forecasting</a>
+          </div>
+        </div>
+        <div class="container">
+        <br>
+        </div>
+      </div>
+    </div>
+
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-md-12">
+<h1> Hospitalisation Prediction for (date): </h1>
+<h1> FORECAST VALUE WILL GO HERE </h1>
+
+<br>
+
+<form action="/new_forecast.html">
+  <label for="confirmed_cases">Confirmed Cases:</label>
+  <input type="integer" id="conf_cases" name="conf_cases"><br><br>
+  <label for="confirmed_deaths">Confirmed Deaths:</label>
+  <input type="text" id="conf_deaths" name="conf_deaths"><br><br>
+  <label for="confirmed_recovered">Confirmed Recovered:</label>
+  <input type="text" id="conf_recovered" name="conf_recovered"><br><br>
+  <label for="confirmed_active">Confirmed Active:</label>
+  <input type="text" id="conf_active" name="conf_active"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<br>
+
+<p>Click the "Submit" button to view forecasted hospitalisation numbers based on machine 
+  learning of COVID-19 confirmed cases, active cases, recovered cases and deaths.</p>
+
+</div>
+</div>
+</div>
+</body>
+</html>
