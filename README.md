@@ -133,6 +133,215 @@ The next best results were obtained using any combination of 3 variables (green 
 The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
 The next best results were obtained using the combination of Confirmed Cases and Recovered Cases (green highlight). 
 	
+7.3	Machine Learning using Tableau Exponential smoothing 
+ 
+![image](https://user-images.githubusercontent.com/89948865/166322728-cf558d03-c986-4d8a-8e24-57f8ac66c8fa.png) 
+
+## 8.	Technologies Used: 
+
+The project used the following technologies:
+•	Linear Regression Evaluation:
+o	Linear Regression
+o	Lasso Regression
+o	Ridge Regression
+o	ElasticNet Regression
+•	Polynomial Regression Evaluation:
+o	Polynomial Regression with X in the Nth degree
+o	Polynomial Regression Analysis Code from [2] -  Blog by Animesh Agarwal
+•	Regression Execution
+o	Scikit-Learn
+•	Tableau
+•	PostGreSQL Data Base
+•	Python / Pandas
+•	Python Flask Powered API
+•	Python Library - psycopg2
+•	Java Script D3.js
+•	HTML
+•	CSS
+•	Bootstrap
+•	GitHub
+
+## 9.	Project Datasets: 
+
+  The datasets for the project can be found at the following link.
+	“JHU – Time Series Daily Reports”
+https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports
+
+	The hospitalisation dataset for the project can be found at the following link.
+	https://ourworldindata.org/covid-hospitalizations
+
+## 10.	Database QuickDB Code 
+country_codes
+-
+country_id VARCHAR(255)
+country_name VARCHAR(255)
+continent_name VARCHAR(255)
+
+covid_cases
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+date VARCHAR(255)
+confirmed INT
+deaths INT
+recovered INT
+active INT
+case_fatality VARCHAR(255)
+new_cases INT
+new_deaths INT
+new_recovered INT
+
+population
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+population INT
+
+vaccinations
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+date VARCHAR(255)
+fully_vaccinated_per_hundred INT
+not_fully_vaccinated_per_hundred INT
+boosted_per_hundred INT
+
+full_covid_table
+-
+country_id VARCHAR(255) FK - country_codes.country_id
+country_name VARCHAR(255)
+continent_name VARCHAR(255)
+date VARCHAR(255)
+confirmed INT
+deaths INT
+recovered INT
+active INT
+case_fatality VARCHAR(255)
+new_cases INT
+new_deaths INT
+new_recovered INT
+population INT
+vaccinated_per_hundred INT
+fully_vaccinated_per_hundred INT
+not_fully_vaccinated_per_hundred INT
+boosted_per_hundred INT
+hospital_occupancy INT
+
+## 11.		Database Schema – Entity Relationship Diagram  
+
+![image](https://user-images.githubusercontent.com/89948865/166323124-32f0dab0-7632-4b1d-afd2-bd3e37345bbe.png) 
+
+## 12.	Database Description 
+
+The  key to the data base was to use the International Standards Organisation (iso_code: ISO 3166-1 alpha-3 – three-letter country code) henceforth referred to as “iso-code”, to create relationships between the tables. 
+The “country-codes” table contains the  “iso-code” and matching “country-name” for all countries covered by the “iso-code” and was generated during the Extraction phase of the project.
+The “covid-cases” table contains the basic cleansed data from the JHU Data Sets which form the basis of the global view of Covid-19 cases.
+The “vaccinations” table contains vaccination status from the Our World in data Vaccination data set.
+
+## 13.	Database Meta Data 
+
+“country” table
+•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+•	country-name: 	the name of the country in the ISO data set
+
+“covid-cases” table
+•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+•	date: 		date of the observation
+•	confirmed:	the total number of cumulative confirmed Covid-19 cases regardless of the variant
+•	deaths:	the total number of cumulative deaths attributed to Covid-19 regardless of the variant
+•	recovered:	the total number of cumulative recovered Covid-19 cases
+•	active:		the total number of cumulative active Covid-19 cases
+•	new_cases:	the total number of incremental new  Covid-19 cases
+•	new_deaths:	the total number of incremental new Covid-19 deaths
+•	new_ recovered:
+			the total number of incremental new recovered Covid-19 cases
+
+“population” table
+•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+•	population: 	the population of the country at 31/12/2020
+
+“vaccinations” table
+•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+•	date: 		date of the observation
+•	vaccinated_per_hundred:
+total number of people who received at least one vaccine dose. If a person receives the first dose of a 2-dose vaccine, this metric goes up by 1. If they receive the second dose, the metric stays the same i.e., 1.
+•	fully_vaccinated_per_hundred:
+people vaccinated per 100 people in the total population of the country. If a person receives the first dose of a 2-dose vaccine, this metric stays the same. If they receive the second dose, the metric goes up by 1.
+•	not_fully_vaccinated_per_hundred:
+ people not vaccinated per 100 people in the total population of the country
+•	boosted_per_hundred:
+people who have received their booster dose per 100 people in the total population of the country
+ 
+## 14.	Data Extract, Transformation, Load: 
+
+•	  Extracting the Data
+The Extract phase  uses urls / wget downloads in place of API calls are APIs are not available for the datasets needed. The JHU time series data sets were retrieved using this method.
+•	 Transforming the Data
+The detailed description of the Data Transformation is covered in the end of this section. It covers both data cleansing and data transformation and does the typical:
+•	removing unwanted or duplicate data,
+•	fixing structural issues,
+•	handling missing data,
+•	removing outliers,
+•	providing a quality assurance check on the data prior to regression analysis.
+•	 Loading the Data
+The code for the PostGreSQL data base load is as follows:
+# Create database connection
+rds_connection_string = "postgres:meg221196@localhost:5432/integrated_covid_view_db"
+engine = create_engine(f'postgresql://{rds_connection_string}')
+
+# Confirm database tables
+engine.table_names()
+  
+			# Load dataframes to database tables
+full_covid_table.to_sql(name='full_covid_table', con=engine, if_exists='append', index=False)
+country_codes.to_sql(name='country_codes', con=engine, if_exists='append', index=False)
+covid_cases.to_sql(name='covid_cases', con=engine, if_exists='append', index=False)
+population.to_sql(name='population', con=engine, if_exists='append', index=False)
+vaccinations.to_sql(name='vaccinations', con=engine, if_exists='append', index=False)
+ 
+The detailed Data Transformation steps are as follows:
+1)	Save DFs to CSVs to do exploratory data analysis.
+2)	Conduct exploratory data analysis.
+3)	Use melt() to unpivot DataFrames from current wide format 265 rows × 749 columns into long  format 208600 rows × 6 columns.
+4)	Remove recovered data for Canada due to mismatch issue. Canada recovered data is counted for the whole Country instead of by Province/State which is how Canada and the rest of the world count data for "Confirmed Cases" and "Deaths".
+5)	 Merge the three JHU dataframes, Confirmed Cases, Deaths, Recovered Cases.
+a.	merge confirmed_df_long and deaths_df_long into full_table
+b.	merge full_table and recovered_df_long
+6)	Check Canada data in "full_table" - "recovered" should be 0 and check of CSV file confirms that it is.
+7)	Convert date from string to datetime.
+8)	Detect missing values NaN.
+9)	Replace 'recovered' NaNs with zero.
+10)	Three cruise ships need to be treated differently to the rest of the cases.So extract and remove data for these ships.
+11)	Calculate active cases = confirmed cases - deaths – recovered cases.
+12)	Aggregate data into Country/Region and group by Date and Country/Region.
+13)	Calculate daily New cases, New deaths and New recovered by deducting the corresponding accumulative data on the previous day
+14)	Use pd.merge to group the final data frame on Country/Region / Date.
+15)	Fix the new data types as integer.
+16)	The final data frame is sorted by Date and Country/Region ascending where: -	
+ Confirmed Cases, Deaths, Recovered and Active are cumulative data for the   entire period, and, New cases, New deaths and New Recovered are daily incremental data.
+17)	Convert data frame to a csv file for backup.
+18)	Read the Vaccination dataset - csv file into a data frame.
+19)	Derive the “people_not_vaccinated” from the “people_fully_vaccinated”.
+20)	 Detect missing values NaN 
+21)	 Replace NaNs with zero
+22)	 Data cleansing replace ”United States” with “US” to standardise data.
+23)	 Save cleansed vaccination data to a CSV for backup.
+24)	 Read the Population data set - csv file into a data frame.
+25)	 Detect missing values NaN 
+26)	 Replace NaNs with zero
+27)	 Save cleansed Population data to a CSV for backup.
+28)	 Copy OWID Vaccination data frame, as we want to use OWID country codes.
+29)	 Add Africas to match population data frame.
+30)	  Edit “full_grouped” covid case data frame to include country ID.
+31)	  Change structure of data frames to match structure of tables created in the database.
+32)	  Set index of country codes data frame and remove null index row.
+33)	 Covid Cases table - copy only the columns needed into a new Data Frame.
+34)	 Rename columns to fit the tables created in the database.
+35)	 Vaccinations table - copy only the columns needed into a new Data Frame.
+36)	 Rename columns to fit the tables created in the database.
+37)	 Create PostgreSQL database connection.
+38)	 Confirm database tables.
+39)	Load data frames to the database tables
+_______________________________________________________________________________________________
+
+
  
  
 
