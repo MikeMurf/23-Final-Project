@@ -237,15 +237,16 @@
 235,VEN,Venezuela,South America
 236,VNM,Vietnam,Asia
 237,WLF,Wallis and Futuna,Oceania
-238,OWID_WRL,World,
-239,YEM,Yemen,Asia
-240,ZMB,Zambia,Africa
-241,ZWE,Zimbabwe,Africa
-242,AFE,Africa Eastern and Southern,Africa
-243,AFW,Africa Western and Central,Africa
-244,ARB,Arab World,Asia
-245,ASM,American Samoa,Oceania
-246,CHI,Channel Islands,Europe
-247,PRK,"Korea, Dem. Peoples Rep.",Asia
-248,XKX,Kosovo,Europe
-249,MAF,St. Martin,North America
+238,ESH,Western Sahara,Africa
+239,OWID_WRL,World,
+240,YEM,Yemen,Asia
+241,ZMB,Zambia,Africa
+242,ZWE,Zimbabwe,Africa
+243,AFE,Africa Eastern and Southern,Africa
+244,AFW,Africa Western and Central,Africa
+245,ARB,Arab World,Asia
+246,ASM,American Samoa,Oceania
+247,CHI,Channel Islands,Europe
+248,PRK,"Korea, Dem. Peoples Rep.",Asia
+249,XKX,Kosovo,Europe
+250,MAF,St. Martin,North America

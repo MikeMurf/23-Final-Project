@@ -8,14 +8,15 @@ CREATE TABLE "full_covid_table" (
     "deaths" INT   NOT NULL,
     "recovered" INT   NOT NULL,
     "active" INT   NOT NULL,
-    "case_fatality" REAL   NOT NULL,
+    "case_fatality" VARCHAR(255),
     "new_cases" INT   NOT NULL,
     "new_deaths" INT   NOT NULL,
     "new_recovered" INT   NOT NULL,
 	"vaccinated_per_hundred" INT   NOT NULL,
     "fully_vaccinated_per_hundred" INT   NOT NULL,
     "boosted_per_hundred" INT   NOT NULL,
-    "not_fully_vaccinated_per_hundred" INT   NOT NULL
+    "not_fully_vaccinated_per_hundred" INT   NOT NULL,
+    "hospital_occupancy" INT   NOT NULL
 );
 
 SELECT * FROM full_covid_table
