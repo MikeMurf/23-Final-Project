@@ -102,7 +102,7 @@ This article provides an excellent explanation of Regression and ways of achievi
   * **There are two methods of overcoming overfitting:**
   * **reducing the model complexity,** and, 
   * **regularisation** which  tries to improve the accuracy of the model.
--	Regularisation is where Lasso, Ridge and ElasticNet come into play.
+-	**Regularisation is where Lasso, Ridge and ElasticNet come into play.**
 -	**Lasso** – the Least Absolute Shrinkage and Selection model aims to overcome overfitting by applying the penalty L1 which is the sum of the absolute value of the beta coefficients of the quadratic equation that describes the line of best fit. 
 -	**Ridge** - the model aims to overcome overfitting by applying penalty L2 which is the sum of the square of the magnitude of beta coefficients of the quadratic equation that describes the line of best fit.
 -	**ElasticNet** – combines the techniques of Lasso and Ridge to get the best of both worlds.
