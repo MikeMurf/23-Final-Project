@@ -11,7 +11,7 @@ This report details how we arrived at our learnings and includes:
 2. Team Members
 3. Brief Project Description
 4. Project Rationale
-5. Project Methodology
+5. Literature Review
 6. Evaluation of Machine Learning Models
 7. Evaluation of Machine Learning Models – Results and Conclusions
 8. Technologies Used
@@ -65,7 +65,7 @@ The project:
 * provides a model for visualising current and future Covid forecasts, and 
 * provides a useful tool for further development of analysis and forecasting capability.
 
-## 5.	Project Methodology: 
+## 5.	Literature Review: 
 
 * **Literature Review**
 An extensive literature review was conducted to identify work that may have done in the area of analysis and forecasting Covid-19 time series analysis data.
