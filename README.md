@@ -99,7 +99,7 @@ This article provides an excellent explanation of Regression and ways of achievi
   * Ridge
   * ElasticNet
   * Lasso, Ridge and ElasticNet are models used to minimise the errors of **overfitting** and **underfitting** which can occur when applying regression to data sets.
-  * There are two methods of overcoming overfitting:
+  * **There are two methods of overcoming overfitting:**
   * **reducing the model complexity,** and, 
   * **regularisation** which  tries to improve the accuracy of the model.
 -	Regularisation is where Lasso, Ridge and ElasticNet come into play.
@@ -115,23 +115,23 @@ The “Polynomial Regression” article [2] deals with the issue of choosing an 
 
 * **Variance** refers to the error due to the complex model trying to fit the data. High variance means the model passes through most of the data points and it results in over-fitting the data to the data points.
 
-**Ideally, a machine learning model should have low variance and low bias. 
+**Ideally, a machine learning model should have low variance and low bias.** 
 
-**But practically it’s impossible to have both. Therefore, to achieve a good model that performs well both on the training and unseen data, a trade-off is made between Bias and Variance.
+**But practically it’s impossible to have both. Therefore, to achieve a good model that performs well both on the training and unseen data, a trade-off is made between Bias and Variance.**
  
 ## 7.	Evaluation of Machine Learning Models – Results and Conclusions 
 
 The machine Learning models were run with differing combinations of Independent Variables and the results are tabulated below showing combinations of variables, Mean Square Error values and R Squared values.
-7.1	Machine Learning models using Linear Regression
+
+**7.1	Machine Learning models using Linear Regression**
 The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
 The next best results were obtained using any combination of 3 variables (green highlight). 
  
-
-7.2	Machine Learning model using Polynomial Regression with X in the 5th Degree
+**7.2	Machine Learning model using Polynomial Regression with X in the 5th Degree**
 The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
 The next best results were obtained using the combination of Confirmed Cases and Recovered Cases (green highlight). 
 	
-7.3	Machine Learning using Tableau Exponential smoothing 
+**7.3	Machine Learning using Tableau Exponential smoothing** 
  
 ![image](https://user-images.githubusercontent.com/89948865/166322728-cf558d03-c986-4d8a-8e24-57f8ac66c8fa.png) 
 
