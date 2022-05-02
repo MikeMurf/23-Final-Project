@@ -65,6 +65,75 @@ The project:
 •	provides a model for visualising current and future Covid forecasts, and 
 •	provides a useful tool for further development of analysis and forecasting capability.
 
+## 5.	Project Methodology: 
+
+•	   Literature Review
+An extensive literature review was conducted to identify work that may have done in the area of analysis and forecasting Covid-19 time series analysis data.
+•	   Citations
+From the reviewed literature three articles in particular were chosen for detailed analysis and citation purposes. 
+They are:
+•	[1]	“Analysis and Prediction of Covid-19 using Regression Models and Time Series Forecasting” –  which can be found at the following link:
+https://ieeexplore.ieee.org/document/9377137 
+
+	[S. Shaikh, J. Gala, A. Jain, S. Advani, S. Jaidhara and M. Roja Edinburgh, "Analysis and Prediction of COVID-19 using Regression Models and Time Series Forecasting," 2021 11th International Conference on Cloud Computing, Data Science & Engineering (Confluence), 2021, pp. 989-995, do: 10.1109/Confluence51648.2021.9377137.]
+
+				This article describes the evaluation of Linear and Polynomial Regression Models for 
+forecasting future Covid-19 cases from a historical data set of some 7 months cases in India. 
+
+•	[2]	“Polynomial Regression” – Author:  - Animesh Agarwal
+https://towardsdatascience.com/polynomial-regression-bbe8b9d97491
+				
+				This article is part of a series of blogs published by the author  describing Polynomial 
+Regression and ways of achieving the best fit of the Regression line to the data. It provides sample code to demonstrate how to minimise the effects of over-fitting and under-fitting the Regression line to the data.
+
+•	[3]	“Lasso , Ridge & Elastic Net Regression: A Complete Understanding (2021)” 
+– Author:  - Rohit Bhadauriya
+https://medium.com/@creatrohit9/lasso-ridge-elastic-net-regression-a-complete-understanding-2021-b335d9e8ca3
+
+This article provides an excellent explanation of Regression and ways of achieving the best fit of the Regression line to the data sets. It also provides sample code to demonstrate how to minimise the effects of over-fitting and under-fitting the Regression line to the data.
+
+## 6.	Evaluation of Machine Learning Models 
+
+•	   Evaluation of LinearRegression Models
+-	LinearRegression
+o	Lasso
+o	Ridge
+o	ElasticNet
+
+-	Lasso, Ridge and ElasticNet are models used to minimise the errors of overfitting and underfitting which can occur when applying regression to data sets.
+-	There are two methods of overcoming overfitting:
+o	reducing the model complexity, and, 
+o	regularisation which  tries to improve the accuracy of the model.
+-	Regularisation is where Lasso, Ridge and ElasticNet come into play.
+-	Lasso – the Least Absolute Shrinkage and Selection model aims to overcome overfitting by applying the penalty L1 which is the sum of the absolute value of the beta coefficients of the quadratic equation that describes the line of best fit. 
+-	Ridge - the model aims to overcome overfitting by applying penalty L2 which is the sum of the square of the magnitude of beta coefficients of the quadratic equation that describes the line of best fit.
+-	ElasticNet – combines the techniques of Lasso and Ridge to get the best of both worlds.
+-	[Please refer to: - [3] -  “Lasso , Ridge & Elastic Net Regression: A Complete Understanding (2021)” for a detailed explanation of these concepts.] 
+
+•	 Evaluation of Polynomial Regression Models
+The “Polynomial Regression” article [2] deals with the issue of choosing an optimal model. To answer this question, we need to understand the bias vs variance trade-off. 
+
+Bias refers to the error due to the model’s simplistic assumptions in fitting the data. A high bias means that the model is unable to capture the patterns in the data and this results in under-fitting the model to the data points.
+
+Variance refers to the error due to the complex model trying to fit the data. High variance means the model passes through most of the data points and it results in over-fitting the data to the data points.
+
+Ideally, a machine learning model should have low variance and low bias. 
+
+But practically it’s impossible to have both. Therefore, to achieve a good model that performs well both on the training and unseen data, a trade-off is made between Bias and Variance.
+ 
+## 7.	Evaluation of Machine Learning Models – Results and Conclusions 
+
+The machine Learning models were run with differing combinations of Independent Variables and the results are tabulated below showing combinations of variables, Mean Square Error values and R Squared values.
+7.1	Machine Learning models using Linear Regression
+The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
+The next best results were obtained using any combination of 3 variables (green highlight). 
+ 
+
+7.2	Machine Learning model using Polynomial Regression with X in the 5th Degree
+The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
+The next best results were obtained using the combination of Confirmed Cases and Recovered Cases (green highlight). 
+	
+ 
  
 
 
