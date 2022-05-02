@@ -1,0 +1,252 @@
+,country_id,country_name,continent_name
+0,AFG,Afghanistan,Asia
+1,OWID_AFR,Africa,
+2,ALB,Albania,Europe
+3,DZA,Algeria,Africa
+4,AND,Andorra,Europe
+5,AGO,Angola,Africa
+6,AIA,Anguilla,North America
+7,ATG,Antigua and Barbuda,North America
+8,ARG,Argentina,South America
+9,ARM,Armenia,Asia
+10,ABW,Aruba,North America
+11,OWID_ASI,Asia,
+12,AUS,Australia,Oceania
+13,AUT,Austria,Europe
+14,AZE,Azerbaijan,Asia
+15,BHS,Bahamas,North America
+16,BHR,Bahrain,Asia
+17,BGD,Bangladesh,Asia
+18,BRB,Barbados,North America
+19,BLR,Belarus,Europe
+20,BEL,Belgium,Europe
+21,BLZ,Belize,North America
+22,BEN,Benin,Africa
+23,BMU,Bermuda,North America
+24,BTN,Bhutan,Asia
+25,BOL,Bolivia,South America
+26,BES,Bonaire Sint Eustatius and Saba,North America
+27,BIH,Bosnia and Herzegovina,Europe
+28,BWA,Botswana,Africa
+29,BRA,Brazil,South America
+30,VGB,British Virgin Islands,North America
+31,BRN,Brunei,Asia
+32,BGR,Bulgaria,Europe
+33,BFA,Burkina Faso,Africa
+34,BDI,Burundi,Africa
+35,KHM,Cambodia,Asia
+36,CMR,Cameroon,Africa
+37,CAN,Canada,North America
+38,CPV,Cape Verde,Africa
+39,CYM,Cayman Islands,North America
+40,CAF,Central African Republic,Africa
+41,TCD,Chad,Africa
+42,CHL,Chile,South America
+43,CHN,China,Asia
+44,COL,Colombia,South America
+45,COM,Comoros,Africa
+46,COG,Congo,Africa
+47,COK,Cook Islands,Oceania
+48,CRI,Costa Rica,North America
+49,CIV,Cote d'Ivoire,Africa
+50,HRV,Croatia,Europe
+51,CUB,Cuba,North America
+52,CUW,Curacao,North America
+53,CYP,Cyprus,Europe
+54,CZE,Czechia,Europe
+55,COD,Democratic Republic of Congo,Africa
+56,DNK,Denmark,Europe
+57,DJI,Djibouti,Africa
+58,DMA,Dominica,North America
+59,DOM,Dominican Republic,North America
+60,ECU,Ecuador,South America
+61,EGY,Egypt,Africa
+62,SLV,El Salvador,North America
+63,GNQ,Equatorial Guinea,Africa
+64,ERI,Eritrea,Africa
+65,EST,Estonia,Europe
+66,SWZ,Eswatini,Africa
+67,ETH,Ethiopia,Africa
+68,OWID_EUR,Europe,
+69,OWID_EUN,European Union,
+70,FRO,Faeroe Islands,Europe
+71,FLK,Falkland Islands,South America
+72,FJI,Fiji,Oceania
+73,FIN,Finland,Europe
+74,FRA,France,Europe
+75,PYF,French Polynesia,Oceania
+76,GAB,Gabon,Africa
+77,GMB,Gambia,Africa
+78,GEO,Georgia,Asia
+79,DEU,Germany,Europe
+80,GHA,Ghana,Africa
+81,GIB,Gibraltar,Europe
+82,GRC,Greece,Europe
+83,GRL,Greenland,North America
+84,GRD,Grenada,North America
+85,GUM,Guam,Oceania
+86,GTM,Guatemala,North America
+87,GGY,Guernsey,Europe
+88,GIN,Guinea,Africa
+89,GNB,Guinea-Bissau,Africa
+90,GUY,Guyana,South America
+91,HTI,Haiti,North America
+92,OWID_HIC,High income,
+93,HND,Honduras,North America
+94,HKG,Hong Kong,Asia
+95,HUN,Hungary,Europe
+96,ISL,Iceland,Europe
+97,IND,India,Asia
+98,IDN,Indonesia,Asia
+99,OWID_INT,International,
+100,IRN,Iran,Asia
+101,IRQ,Iraq,Asia
+102,IRL,Ireland,Europe
+103,IMN,Isle of Man,Europe
+104,ISR,Israel,Asia
+105,ITA,Italy,Europe
+106,JAM,Jamaica,North America
+107,JPN,Japan,Asia
+108,JEY,Jersey,Europe
+109,JOR,Jordan,Asia
+110,KAZ,Kazakhstan,Asia
+111,KEN,Kenya,Africa
+112,KIR,Kiribati,Oceania
+113,OWID_KOS,Kosovo,Europe
+114,KWT,Kuwait,Asia
+115,KGZ,Kyrgyzstan,Asia
+116,LAO,Laos,Asia
+117,LVA,Latvia,Europe
+118,LBN,Lebanon,Asia
+119,LSO,Lesotho,Africa
+120,LBR,Liberia,Africa
+121,LBY,Libya,Africa
+122,LIE,Liechtenstein,Europe
+123,LTU,Lithuania,Europe
+124,OWID_LIC,Low income,
+125,OWID_LMC,Lower middle income,
+126,LUX,Luxembourg,Europe
+127,MAC,Macao,Asia
+128,MDG,Madagascar,Africa
+129,MWI,Malawi,Africa
+130,MYS,Malaysia,Asia
+131,MDV,Maldives,Asia
+132,MLI,Mali,Africa
+133,MLT,Malta,Europe
+134,MHL,Marshall Islands,Oceania
+135,MRT,Mauritania,Africa
+136,MUS,Mauritius,Africa
+137,MEX,Mexico,North America
+138,FSM,Micronesia (country),Oceania
+139,MDA,Moldova,Europe
+140,MCO,Monaco,Europe
+141,MNG,Mongolia,Asia
+142,MNE,Montenegro,Europe
+143,MSR,Montserrat,North America
+144,MAR,Morocco,Africa
+145,MOZ,Mozambique,Africa
+146,MMR,Myanmar,Asia
+147,NAM,Namibia,Africa
+148,NRU,Nauru,Oceania
+149,NPL,Nepal,Asia
+150,NLD,Netherlands,Europe
+151,NCL,New Caledonia,Oceania
+152,NZL,New Zealand,Oceania
+153,NIC,Nicaragua,North America
+154,NER,Niger,Africa
+155,NGA,Nigeria,Africa
+156,NIU,Niue,Oceania
+157,OWID_NAM,North America,
+158,MKD,North Macedonia,Europe
+159,OWID_CYN,Northern Cyprus,Asia
+160,MNP,Northern Mariana Islands,Oceania
+161,NOR,Norway,Europe
+162,OWID_OCE,Oceania,
+163,OMN,Oman,Asia
+164,PAK,Pakistan,Asia
+165,PLW,Palau,Oceania
+166,PSE,Palestine,Asia
+167,PAN,Panama,North America
+168,PNG,Papua New Guinea,Oceania
+169,PRY,Paraguay,South America
+170,PER,Peru,South America
+171,PHL,Philippines,Asia
+172,PCN,Pitcairn,Oceania
+173,POL,Poland,Europe
+174,PRT,Portugal,Europe
+175,PRI,Puerto Rico,North America
+176,QAT,Qatar,Asia
+177,ROU,Romania,Europe
+178,RUS,Russia,Europe
+179,RWA,Rwanda,Africa
+180,SHN,Saint Helena,Africa
+181,KNA,Saint Kitts and Nevis,North America
+182,LCA,Saint Lucia,North America
+183,SPM,Saint Pierre and Miquelon,North America
+184,VCT,Saint Vincent and the Grenadines,North America
+185,WSM,Samoa,Oceania
+186,SMR,San Marino,Europe
+187,STP,Sao Tome and Principe,Africa
+188,SAU,Saudi Arabia,Asia
+189,SEN,Senegal,Africa
+190,SRB,Serbia,Europe
+191,SYC,Seychelles,Africa
+192,SLE,Sierra Leone,Africa
+193,SGP,Singapore,Asia
+194,SXM,Sint Maarten (Dutch part),North America
+195,SVK,Slovakia,Europe
+196,SVN,Slovenia,Europe
+197,SLB,Solomon Islands,Oceania
+198,SOM,Somalia,Africa
+199,ZAF,South Africa,Africa
+200,OWID_SAM,South America,
+201,KOR,South Korea,Asia
+202,SSD,South Sudan,Africa
+203,ESP,Spain,Europe
+204,LKA,Sri Lanka,Asia
+205,SDN,Sudan,Africa
+206,SUR,Suriname,South America
+207,SWE,Sweden,Europe
+208,CHE,Switzerland,Europe
+209,SYR,Syria,Asia
+210,TWN,Taiwan,Asia
+211,TJK,Tajikistan,Asia
+212,TZA,Tanzania,Africa
+213,THA,Thailand,Asia
+214,TLS,Timor,Asia
+215,TGO,Togo,Africa
+216,TKL,Tokelau,Oceania
+217,TON,Tonga,Oceania
+218,TTO,Trinidad and Tobago,North America
+219,TUN,Tunisia,Africa
+220,TUR,Turkey,Asia
+221,TKM,Turkmenistan,Asia
+222,TCA,Turks and Caicos Islands,North America
+223,TUV,Tuvalu,Oceania
+224,UGA,Uganda,Africa
+225,UKR,Ukraine,Europe
+226,ARE,United Arab Emirates,Asia
+227,GBR,United Kingdom,Europe
+228,USA,US,North America
+229,VIR,United States Virgin Islands,North America
+230,OWID_UMC,Upper middle income,
+231,URY,Uruguay,South America
+232,UZB,Uzbekistan,Asia
+233,VUT,Vanuatu,Oceania
+234,VAT,Vatican,Europe
+235,VEN,Venezuela,South America
+236,VNM,Vietnam,Asia
+237,WLF,Wallis and Futuna,Oceania
+238,ESH,Western Sahara,Africa
+239,OWID_WRL,World,
+240,YEM,Yemen,Asia
+241,ZMB,Zambia,Africa
+242,ZWE,Zimbabwe,Africa
+243,AFE,Africa Eastern and Southern,Africa
+244,AFW,Africa Western and Central,Africa
+245,ARB,Arab World,Asia
+246,ASM,American Samoa,Oceania
+247,CHI,Channel Islands,Europe
+248,PRK,"Korea, Dem. Peoples Rep.",Asia
+249,XKX,Kosovo,Europe
+250,MAF,St. Martin,North America
