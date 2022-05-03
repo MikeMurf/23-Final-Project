@@ -145,12 +145,12 @@ The next best results were obtained using the combination of Confirmed Cases and
 
 **8.	Flask Powered API / Hospitalisations Forecasting:**
 
-•	A Flask-powered application was created to extract the full COVID table from the PostgreSQL database and create a JSON file.
-•	This extraction was achieved using a Python library called psycopg2.
-•	Each column of the database table was assigned to a dictionary, which was then JSONified and returned through the app. This app would then be called on in the JS script to create visualisations.
-•	For our machine learning aspect, we implemented confirmed covid cases, active cases, recovered cases and deaths as independent variables in order to predict the number of hospitalisations.
-•	Python was used to develop a polynomial regression model and fit it to our COVID data. The python module ‘Pickle’ was used to save the model and run it with a Flask app in order to create this forecasting tool with HTML.
-•	When run, the model produces the following output. 
+*  A Flask-powered application was created to extract the full COVID table from the PostgreSQL database and create a JSON file.
+*  This extraction was achieved using a Python library called psycopg2.
+*  Each column of the database table was assigned to a dictionary, which was then JSONified and returned through the app. This app would then be called on in the JS script to create visualisations.
+*  For our machine learning aspect, we implemented confirmed covid cases, active cases, recovered cases and deaths as independent variables in order to predict the number of hospitalisations.
+*  Python was used to develop a polynomial regression model and fit it to our COVID data. The python module ‘Pickle’ was used to save the model and run it with a Flask app in order to create this forecasting tool with HTML.
+*  When run, the model produces the following output.  
 
 ![image](https://user-images.githubusercontent.com/89948865/166466301-21fdbfc6-02ec-4d51-993a-de483a86f457.png) 
 
