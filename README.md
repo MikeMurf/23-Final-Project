@@ -1,3 +1,5 @@
+# Given the problems with Heroku / GitHub that prevented deployment on Heroku, we suggest the best way to assess this Assignement is to use the 
+
 # Machine Learnings in the Brave New World of Living with Covid-19 
 
 ![image](https://user-images.githubusercontent.com/89948865/166318657-9897e176-9e28-4de7-9e0d-440d46380d58.png) 
