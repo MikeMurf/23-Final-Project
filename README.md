@@ -145,7 +145,7 @@ The next best results were obtained using the combination of Confirmed Cases and
 
 ## 8.	Technologies Used: 
 
-The project used the following technologies:
+The project uses the following technologies:
 *  Linear Regression Evaluation:
 *  Linear Regression
 *  Lasso Regression
