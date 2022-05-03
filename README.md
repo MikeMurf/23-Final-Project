@@ -169,7 +169,7 @@ The project uses the following technologies:
 
 ## 9.	Project Datasets: 
 
-The datasets for the project can be found at the following link.
+The datasets for the project can be found at the following links.
   * “JHU – Time Series Daily Reports”
   * https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports
 
