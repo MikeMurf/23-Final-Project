@@ -67,9 +67,11 @@ The project:
 
 ## 5.	Literature Review: 
 
-* **Literature Review**
+* **Literature Review:** 
+
 An extensive literature review was conducted to identify work that may have done in the area of analysis and forecasting Covid-19 time series analysis data.
-* **Citations**
+* **Citations** 
+
 From the reviewed literature three articles in particular were chosen for detailed analysis and citation purposes. 
 They are:
   * **[1]	“Analysis and Prediction of Covid-19 using Regression Models and Time Series Forecasting”** –  which can be found at the following link:
