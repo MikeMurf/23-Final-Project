@@ -143,7 +143,18 @@ The next best results were obtained using the combination of Confirmed Cases and
  
 ![image](https://user-images.githubusercontent.com/89948865/166322728-cf558d03-c986-4d8a-8e24-57f8ac66c8fa.png) 
 
-## 8.	Technologies Used: 
+**8.	Flask Powered API / Hospitalisations Forecasting:**
+
+•	A Flask-powered application was created to extract the full COVID table from the PostgreSQL database and create a JSON file.
+•	This extraction was achieved using a Python library called psycopg2.
+•	Each column of the database table was assigned to a dictionary, which was then JSONified and returned through the app. This app would then be called on in the JS script to create visualisations.
+•	For our machine learning aspect, we implemented confirmed covid cases, active cases, recovered cases and deaths as independent variables in order to predict the number of hospitalisations.
+•	Python was used to develop a polynomial regression model and fit it to our COVID data. The python module ‘Pickle’ was used to save the model and run it with a Flask app in order to create this forecasting tool with HTML.
+•	When run, the model produces the following output. 
+
+![image](https://user-images.githubusercontent.com/89948865/166466301-21fdbfc6-02ec-4d51-993a-de483a86f457.png) 
+
+## 9.	Technologies Used: 
 
 The project uses the following technologies:
 *  Linear Regression Evaluation:
@@ -167,7 +178,7 @@ The project uses the following technologies:
 *  Bootstrap
 * GitHub
 
-## 9.	Project Datasets: 
+## 10.	Project Datasets: 
 
 The datasets for the project can be found at the following links.
   * “JHU – Time Series Daily Reports”
@@ -176,15 +187,15 @@ The datasets for the project can be found at the following links.
   * The hospitalisation dataset for the project can be found at the following link.
   * https://ourworldindata.org/covid-hospitalizations
 
-## 10.	Database QuickDB Code 
+## 11.	Database QuickDB Code 
 
 ![image](https://user-images.githubusercontent.com/89948865/166393127-9adbeaf2-310f-4317-9f98-098bca784eec.png)
 
-## 11.		Database Schema – Entity Relationship Diagram  
+## 12.		Database Schema – Entity Relationship Diagram  
 
 ![image](https://user-images.githubusercontent.com/89948865/166323124-32f0dab0-7632-4b1d-afd2-bd3e37345bbe.png) 
 
-## 12.	Database Description 
+## 13.	Database Description 
 
 The  key to the data base was to use the **International Standards Organisation (iso_code: ISO 3166-1 alpha-3 – three-letter country code)** henceforth referred to as “iso-code”, to create relationships between the tables. 
 The “country-codes” table contains the  “iso-code” and matching “country-name” for all countries covered by the “iso-code” and was generated during the Extraction phase of the project.
@@ -192,7 +203,7 @@ The “covid-cases” table contains the basic cleansed data from the JHU Data S
 The “vaccinations” table contains vaccination status from the Our World in data Vaccination data set.
 The "full-covid-table" contains all of the information required to drive our visualisations via the Flask powered API.
 
-## 13.	Database Meta Data 
+## 14.	Database Meta Data 
 
 “country” table
   * country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
@@ -227,7 +238,7 @@ The "full-covid-table" contains all of the information required to drive our vis
   * boosted_per_hundred:
   *                     people who have received their booster dose per 100 people in the total population of the country
  
-## 14.	Data Extract, Transformation, Load: 
+## 15.	Data Extract, Transformation, Load: 
 
   * **Extracting the Data**
 The Extract phase  uses urls / wget downloads in place of API calls are APIs are not available for the datasets needed. The JHU time series data sets were retrieved using this method. 
