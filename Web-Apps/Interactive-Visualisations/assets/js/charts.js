@@ -510,7 +510,7 @@ function getCovidDateData() {
 
   // Apply the group bar mode to the layout
   var layout = {
-    title: "Top 10 Countries with Highest Confirmed Cases on March 15, 2022",
+    title: "Top 5 Countries with Highest Confirmed Cases on May 1, 2022",
     xaxis: {title: {text: "Number of Confirmed Cases"}},
     margin: {
       l: 100,
