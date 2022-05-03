@@ -125,11 +125,17 @@ The “Polynomial Regression” article [2] deals with the issue of choosing an 
 
 The machine Learning models were run with **differing combinations of Independent Variables** and the results are tabulated below showing combinations of variables, **Mean Square Error** values and **R Squared values**.
 
-**7.1	Machine Learning models using Linear Regression**
+**7.1	Machine Learning models using Linear Regression** 
+
+![image](https://user-images.githubusercontent.com/89948865/166391063-fdfb0344-d809-4827-b681-245d6137787a.png)
+
 The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
 The next best results were obtained using any combination of 3 variables (green highlight). 
  
-**7.2	Machine Learning model using Polynomial Regression with X in the 5th Degree**
+**7.2	Machine Learning model using Polynomial Regression with X in the 5th Degree** 
+
+![image](https://user-images.githubusercontent.com/89948865/166391087-8f498486-9a11-4b7b-91a2-132c604a9b14.png)
+
 The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
 The next best results were obtained using the combination of Confirmed Cases and Recovered Cases (green highlight). 
 	
