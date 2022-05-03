@@ -178,58 +178,63 @@ The datasets for the project can be found at the following links.
 
 ## 10.	Database QuickDB Code 
 
-country_codes
--
-country_id VARCHAR(255)
-country_name VARCHAR(255)
-continent_name VARCHAR(255)
+country_codes 
 
-covid_cases
+country_id VARCHAR(255) 
+country_name VARCHAR(255) 
+continent_name VARCHAR(255) 
 -
-country_id VARCHAR(255) FK - country_codes.country_id
-date VARCHAR(255)
-confirmed INT
-deaths INT
-recovered INT
-active INT
-case_fatality VARCHAR(255)
-new_cases INT
-new_deaths INT
-new_recovered INT
 
-population
+covid_cases 
+
+country_id VARCHAR(255) FK - country_codes.country_id 
+date VARCHAR(255) 
+confirmed INT 
+deaths INT 
+recovered INT 
+active INT 
+case_fatality VARCHAR(255) 
+new_cases INT 
+new_deaths INT 
+new_recovered INT 
 -
+
+population 
+
 country_id VARCHAR(255) FK - country_codes.country_id
 population INT
+-
 
 vaccinations
--
+
 country_id VARCHAR(255) FK - country_codes.country_id
 date VARCHAR(255)
 fully_vaccinated_per_hundred INT
 not_fully_vaccinated_per_hundred INT
 boosted_per_hundred INT
+-
 
 full_covid_table
--
-country_id VARCHAR(255) FK - country_codes.country_id
-country_name VARCHAR(255)
-continent_name VARCHAR(255)
-date VARCHAR(255)
-confirmed INT
-deaths INT
-recovered INT
-active INT
-case_fatality VARCHAR(255)
+
+country_id VARCHAR(255) FK - country_codes.country_id 
+country_name VARCHAR(255) 
+continent_name VARCHAR(255) 
+date VARCHAR(255) 
+confirmed INT 
+deaths INT 
+recovered INT 
+active INT 
+case_fatality VARCHAR(255) 
 new_cases INT
 new_deaths INT
-new_recovered INT
-population INT
-vaccinated_per_hundred INT
-fully_vaccinated_per_hundred INT
-not_fully_vaccinated_per_hundred INT
-boosted_per_hundred INT
-hospital_occupancy INT
+new_recovered INT 
+population INT 
+vaccinated_per_hundred INT 
+fully_vaccinated_per_hundred INT 
+not_fully_vaccinated_per_hundred INT 
+boosted_per_hundred INT 
+hospital_occupancy INT 
+-
 
 ## 11.		Database Schema – Entity Relationship Diagram  
 
