@@ -103,13 +103,13 @@ This article provides an excellent explanation of Regression and ways of achievi
   * **reducing the model complexity,** and, 
   * **regularisation** which  tries to improve the accuracy of the model.
 -	**Regularisation is where Lasso, Ridge and ElasticNet come into play.**
--	**Lasso** – the Least Absolute Shrinkage and Selection model aims to overcome overfitting by applying the penalty L1 which is the sum of the absolute value of the beta coefficients of the quadratic equation that describes the line of best fit. 
+-	**Lasso** – the **Least Absolute Shrinkage and Selection** model aims to overcome overfitting by applying the penalty L1 which is the sum of the absolute value of the beta coefficients of the quadratic equation that describes the line of best fit. 
 -	**Ridge** - the model aims to overcome overfitting by applying penalty L2 which is the sum of the square of the magnitude of beta coefficients of the quadratic equation that describes the line of best fit.
 -	**ElasticNet** – combines the techniques of Lasso and Ridge to get the best of both worlds.
 -	[Please refer to: - [3] -  “Lasso , Ridge & Elastic Net Regression: A Complete Understanding (2021)” for a detailed explanation of these concepts.] 
 
 * **Evaluation of Polynomial Regression Models**
-The “Polynomial Regression” article [2] deals with the issue of choosing an optimal model. To answer this question, we need to understand the **bias** vs **variance** trade-off. 
+The “Polynomial Regression” article [2] deals with the issue of choosing an optimal model. To answer this question, we needed to understand the **bias** vs **variance** trade-off. 
 
 * **Bias** refers to the error due to the model’s simplistic assumptions in fitting the data. A high bias means that the model is unable to capture the patterns in the data and this results in under-fitting the model to the data points.
 
@@ -121,7 +121,7 @@ The “Polynomial Regression” article [2] deals with the issue of choosing an 
  
 ## 7.	Evaluation of Machine Learning Models – Results and Conclusions 
 
-The machine Learning models were run with differing combinations of Independent Variables and the results are tabulated below showing combinations of variables, Mean Square Error values and R Squared values.
+The machine Learning models were run with **differing combinations of Independent Variables** and the results are tabulated below showing combinations of variables, **Mean Square Error** values and **R Squared values**.
 
 **7.1	Machine Learning models using Linear Regression**
 The results  show that the best outcomes were obtained using 4 variables – Confirmed Cases, Active Cases, Recovered Cases and Deaths (yellow highlight). 
@@ -138,37 +138,38 @@ The next best results were obtained using the combination of Confirmed Cases and
 ## 8.	Technologies Used: 
 
 The project used the following technologies:
-•	Linear Regression Evaluation:
-o	Linear Regression
-o	Lasso Regression
-o	Ridge Regression
-o	ElasticNet Regression
-•	Polynomial Regression Evaluation:
-o	Polynomial Regression with X in the Nth degree
-o	Polynomial Regression Analysis Code from [2] -  Blog by Animesh Agarwal
-•	Regression Execution
-o	Scikit-Learn
-•	Tableau
-•	PostGreSQL Data Base
-•	Python / Pandas
-•	Python Flask Powered API
-•	Python Library - psycopg2
-•	Java Script D3.js
-•	HTML
-•	CSS
-•	Bootstrap
-•	GitHub
+*  Linear Regression Evaluation:
+*  Linear Regression
+*  Lasso Regression
+*  Ridge Regression
+*  ElasticNet Regression
+*  Polynomial Regression Evaluation:
+*  Polynomial Regression with X in the Nth degree
+*  Polynomial Regression Analysis Code from [2] -  Blog by Animesh Agarwal
+*  Regression Execution
+*  Scikit-Learn
+*  Tableau
+*  PostGreSQL Data Base
+*  Python / Pandas
+*  Python Flask Powered API
+*  Python Library - psycopg2
+*  Java Script D3.js
+*  HTML
+*  CSS
+*  Bootstrap
+* GitHub
 
 ## 9.	Project Datasets: 
 
-  The datasets for the project can be found at the following link.
-	“JHU – Time Series Daily Reports”
-https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports
+The datasets for the project can be found at the following link.
+  * “JHU – Time Series Daily Reports”
+  * https://github.com/CSSEGISandData/COVID-19/tree/master/csse_covid_19_data/csse_covid_19_daily_reports
 
-	The hospitalisation dataset for the project can be found at the following link.
-	https://ourworldindata.org/covid-hospitalizations
+  * The hospitalisation dataset for the project can be found at the following link.
+  * https://ourworldindata.org/covid-hospitalizations
 
 ## 10.	Database QuickDB Code 
+
 country_codes
 -
 country_id VARCHAR(255)
@@ -228,73 +229,78 @@ hospital_occupancy INT
 
 ## 12.	Database Description 
 
-The  key to the data base was to use the International Standards Organisation (iso_code: ISO 3166-1 alpha-3 – three-letter country code) henceforth referred to as “iso-code”, to create relationships between the tables. 
+The  key to the data base was to use the **International Standards Organisation (iso_code: ISO 3166-1 alpha-3 – three-letter country code)** henceforth referred to as “iso-code”, to create relationships between the tables. 
 The “country-codes” table contains the  “iso-code” and matching “country-name” for all countries covered by the “iso-code” and was generated during the Extraction phase of the project.
 The “covid-cases” table contains the basic cleansed data from the JHU Data Sets which form the basis of the global view of Covid-19 cases.
 The “vaccinations” table contains vaccination status from the Our World in data Vaccination data set.
+The "full-covid-table" contains all of the information required to drive our visualisations via the Flask powered API.
 
 ## 13.	Database Meta Data 
 
 “country” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	country-name: 	the name of the country in the ISO data set
+  * country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+  * country-name: 	the name of the country in the ISO data set
 
 “covid-cases” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	date: 		date of the observation
-•	confirmed:	the total number of cumulative confirmed Covid-19 cases regardless of the variant
-•	deaths:	the total number of cumulative deaths attributed to Covid-19 regardless of the variant
-•	recovered:	the total number of cumulative recovered Covid-19 cases
-•	active:		the total number of cumulative active Covid-19 cases
-•	new_cases:	the total number of incremental new  Covid-19 cases
-•	new_deaths:	the total number of incremental new Covid-19 deaths
-•	new_ recovered:
-			the total number of incremental new recovered Covid-19 cases
+  * country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+  * date: 		date of the observation
+  * confirmed:	        the total number of cumulative confirmed Covid-19 cases regardless of the variant
+  * deaths:	        the total number of cumulative deaths attributed to Covid-19 regardless of the variant
+  * recovered:	        the total number of cumulative recovered Covid-19 cases
+  * active:		the total number of cumulative active Covid-19 cases
+  * new_cases:	        the total number of incremental new  Covid-19 cases
+  * new_deaths:	        the total number of incremental new Covid-19 deaths
+  * new_ recovered:     the total number of incremental new recovered Covid-19 cases
 
 “population” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	population: 	the population of the country at 31/12/2020
+  * country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+  * population: 	the population of the country at 31/12/2020
 
 “vaccinations” table
-•	country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
-•	date: 		date of the observation
-•	vaccinated_per_hundred:
-total number of people who received at least one vaccine dose. If a person receives the first dose of a 2-dose vaccine, this metric goes up by 1. If they receive the second dose, the metric stays the same i.e., 1.
-•	fully_vaccinated_per_hundred:
-people vaccinated per 100 people in the total population of the country. If a person receives the first dose of a 2-dose vaccine, this metric stays the same. If they receive the second dose, the metric goes up by 1.
-•	not_fully_vaccinated_per_hundred:
- people not vaccinated per 100 people in the total population of the country
-•	boosted_per_hundred:
-people who have received their booster dose per 100 people in the total population of the country
+  * country-id: 	the iso_code: ISO 3166-1 alpha-3 – three-letter country code
+  * date: 		date of the observation
+  * vaccinated_per_hundred:
+  *                     total number of people who received at least one vaccine dose. If a person receives the first dose of a 2-dose vaccine, 
+  *                     this metric goes up by 1. If they receive the second dose, the metric stays the same i.e., 1.
+  * fully_vaccinated_per_hundred:
+  *                     people vaccinated per 100 people in the total population of the country. If a person receives the first dose of a 2-dose vaccine, 
+  *                     this metric stays the same. If they receive the second dose, the metric goes up by 1. 
+  * not_fully_vaccinated_per_hundred:
+   *                    people not vaccinated per 100 people in the total population of the country
+  * boosted_per_hundred:
+  *                     people who have received their booster dose per 100 people in the total population of the country
  
 ## 14.	Data Extract, Transformation, Load: 
 
-•	  Extracting the Data
-The Extract phase  uses urls / wget downloads in place of API calls are APIs are not available for the datasets needed. The JHU time series data sets were retrieved using this method.
-•	 Transforming the Data
+  * **Extracting the Data**
+The Extract phase  uses urls / wget downloads in place of API calls are APIs are not available for the datasets needed. The JHU time series data sets were retrieved using this method. 
+
+  * **Transforming the Data**
 The detailed description of the Data Transformation is covered in the end of this section. It covers both data cleansing and data transformation and does the typical:
-•	removing unwanted or duplicate data,
-•	fixing structural issues,
-•	handling missing data,
-•	removing outliers,
-•	providing a quality assurance check on the data prior to regression analysis.
-•	 Loading the Data
-The code for the PostGreSQL data base load is as follows:
-# Create database connection
+  * removing unwanted or duplicate data,
+  * fixing structural issues,
+  * handling missing data,
+  * removing outliers,
+  * providing a quality assurance check on the data prior to regression analysis. 
+
+  *  **Loading the Data** 
+The code for the PostGreSQL data base load is as follows: 
+
+**Create database connection**
 rds_connection_string = "postgres:meg221196@localhost:5432/integrated_covid_view_db"
 engine = create_engine(f'postgresql://{rds_connection_string}')
 
-# Confirm database tables
+**Confirm database tables**
 engine.table_names()
   
-			# Load dataframes to database tables
+**Load dataframes to database tables**
 full_covid_table.to_sql(name='full_covid_table', con=engine, if_exists='append', index=False)
 country_codes.to_sql(name='country_codes', con=engine, if_exists='append', index=False)
 covid_cases.to_sql(name='covid_cases', con=engine, if_exists='append', index=False)
 population.to_sql(name='population', con=engine, if_exists='append', index=False)
 vaccinations.to_sql(name='vaccinations', con=engine, if_exists='append', index=False)
  
-The detailed Data Transformation steps are as follows:
+**The detailed Data Transformation steps are as follows:**
 1)	Save DFs to CSVs to do exploratory data analysis.
 2)	Conduct exploratory data analysis.
 3)	Use melt() to unpivot DataFrames from current wide format 265 rows × 749 columns into long  format 208600 rows × 6 columns.
@@ -312,36 +318,29 @@ b.	merge full_table and recovered_df_long
 13)	Calculate daily New cases, New deaths and New recovered by deducting the corresponding accumulative data on the previous day
 14)	Use pd.merge to group the final data frame on Country/Region / Date.
 15)	Fix the new data types as integer.
-16)	The final data frame is sorted by Date and Country/Region ascending where: -	
- Confirmed Cases, Deaths, Recovered and Active are cumulative data for the   entire period, and, New cases, New deaths and New Recovered are daily incremental data.
-17)	Convert data frame to a csv file for backup.
-18)	Read the Vaccination dataset - csv file into a data frame.
-19)	Derive the “people_not_vaccinated” from the “people_fully_vaccinated”.
-20)	 Detect missing values NaN 
-21)	 Replace NaNs with zero
-22)	 Data cleansing replace ”United States” with “US” to standardise data.
-23)	 Save cleansed vaccination data to a CSV for backup.
-24)	 Read the Population data set - csv file into a data frame.
-25)	 Detect missing values NaN 
-26)	 Replace NaNs with zero
-27)	 Save cleansed Population data to a CSV for backup.
-28)	 Copy OWID Vaccination data frame, as we want to use OWID country codes.
-29)	 Add Africas to match population data frame.
-30)	  Edit “full_grouped” covid case data frame to include country ID.
-31)	  Change structure of data frames to match structure of tables created in the database.
-32)	  Set index of country codes data frame and remove null index row.
-33)	 Covid Cases table - copy only the columns needed into a new Data Frame.
-34)	 Rename columns to fit the tables created in the database.
-35)	 Vaccinations table - copy only the columns needed into a new Data Frame.
-36)	 Rename columns to fit the tables created in the database.
-37)	 Create PostgreSQL database connection.
-38)	 Confirm database tables.
-39)	Load data frames to the database tables
-_______________________________________________________________________________________________
-
-
- 
- 
-
-
-
+16)	The final data frame is sorted by Date and Country/Region ascending where: Confirmed Cases, Deaths, Recovered and Active are cumulative data 
+17)	for the entire period, and, New cases, New deaths and New Recovered are daily incremental data.
+18)	Convert data frame to a csv file for backup.
+19)	Read the Vaccination dataset - csv file into a data frame.
+20)	Derive the “people_not_vaccinated” from the “people_fully_vaccinated”.
+21)	Detect missing values NaN 
+22)	Replace NaNs with zero
+23)	Data cleansing replace ”United States” with “US” to standardise data.
+24)	Save cleansed vaccination data to a CSV for backup.
+25)	Read the Population data set - csv file into a data frame.
+26)	Detect missing values NaN 
+27)	Replace NaNs with zero
+28)	Save cleansed Population data to a CSV for backup.
+29)	Copy OWID Vaccination data frame, as we want to use OWID country codes.
+30)	Add Africas to match population data frame.
+31)	Edit “full_grouped” covid case data frame to include country ID.
+32)	Change structure of data frames to match structure of tables created in the database.
+33)	Set index of country codes data frame and remove null index row.
+34)	Covid Cases table - copy only the columns needed into a new Data Frame.
+35)	Rename columns to fit the tables created in the database.
+36)	Vaccinations table - copy only the columns needed into a new Data Frame.
+37)	Rename columns to fit the tables created in the database.
+38)	Create PostgreSQL database connection.
+39)	Confirm database tables.
+40)	Load data frames to the database tables
+_______________________________________________________________________________________________________________________________________________________________
