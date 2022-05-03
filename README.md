@@ -1,4 +1,4 @@
-# Given the problems with Heroku / GitHub that prevented deployment on Heroku, we suggest the best way to assess this Assignement is to use the 'Download zip' feature of the 'Copy Code' option of this GitHub page to create a local repository to assess the Assignment. 
+# Given the problems with Heroku / GitHub that prevented deployment on Heroku, we suggest the best way to assess this Assignment is to use the 'Download zip' feature of the 'Copy Code' option of this GitHub page to create a local repository to assess the Assignment. 
 
 # Machine Learnings in the Brave New World of Living with Covid-19 
 
