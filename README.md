@@ -96,11 +96,11 @@ This article provides an excellent explanation of Regression and ways of achievi
 ## 6.	Evaluation of Machine Learning Models 
 
 * **Evaluation of LinearRegression Models**
-  * LinearRegression
-  * Lasso
-  * Ridge
-  * ElasticNet
-  * Lasso, Ridge and ElasticNet are models used to minimise the errors of **overfitting** and **underfitting** which can occur when applying regression to data sets.
+  * **LinearRegression**
+  * **Lasso**
+  * **Ridge**
+  * **ElasticNet**
+  * **Lasso, Ridge and ElasticNet** are models used to minimise the errors of **overfitting** and **underfitting** which can occur when applying regression to data sets.
   * **There are two methods of overcoming overfitting:**
   * **reducing the model complexity,** and, 
   * **regularisation** which  tries to improve the accuracy of the model.
@@ -113,13 +113,13 @@ This article provides an excellent explanation of Regression and ways of achievi
 * **Evaluation of Polynomial Regression Models**
 The “Polynomial Regression” article [2] deals with the issue of choosing an optimal model. To answer this question, we needed to understand the **bias** vs **variance** trade-off. 
 
-* **Bias** refers to the error due to the model’s simplistic assumptions in fitting the data. A high bias means that the model is unable to capture the patterns in the data and this results in under-fitting the model to the data points.
+* **Bias** refers to the error due to the model’s simplistic assumptions in fitting the data. A high bias means that the model is unable to capture the patterns in the data and this results in **under-fitting the model to the data points**.
 
-* **Variance** refers to the error due to the complex model trying to fit the data. High variance means the model passes through most of the data points and it results in over-fitting the data to the data points.
+* **Variance** refers to the error due to the complex model trying to fit the data. High variance means the model passes through most of the data points and it results in **over-fitting the data to the data points**.
 
 **Ideally, a machine learning model should have low variance and low bias.** 
 
-**But practically it’s impossible to have both. Therefore, to achieve a good model that performs well both on the training and unseen data, a trade-off is made between Bias and Variance.**
+**But practically it’s impossible to have both. Therefore, to achieve a good model that performs well on both the training and unseen data, a trade-off is made between Bias and Variance.**
  
 ## 7.	Evaluation of Machine Learning Models – Results and Conclusions 
 
